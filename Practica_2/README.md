@@ -44,6 +44,19 @@ En esta práctica se completará la implementación de un servidor Web, es decir
 ![node](imagenes/hello.png)
 
 
+# los verbos HTTP #
+
+Creando modificador 
+
+![node](imagenes/mensaje_modificado.png)
+
+Para validar el cambio en la variable desde el navegador, se debe llamará nuevamente al servidor al método GET como se ha hecho anteriormente. En el navegador se observará el mensaje:
+
+![node](imagenes/hola_pikachu.png)
+
+
+
+
 
 
 
