@@ -15,7 +15,18 @@ export class AppController {
     nombre: "elefante",
     especie: "mamifero",
     edad: 8
-  }]
+  },
+  {
+    nombre: "perro",
+    especie: "mamifero",
+    edad: 3
+  },
+  {
+    nombre: "gato",
+    especie: "mamifero",
+    edad: 1
+  }
+]
 
   @Get()
   getHello(): Animal[] {
@@ -51,7 +62,7 @@ export class AppController {
   }
 
   @Patch(":id/edad/:edad")
-  cambiarEdad(@Param('id') id: number, @Param('edad') edad: number): Animal | string{
+  modificarEdad(@Param('id') id: number, @Param('edad') edad: number): Animal | string{
     try{
       this.animales[id].edad = edad;
       return this.animales[id];
