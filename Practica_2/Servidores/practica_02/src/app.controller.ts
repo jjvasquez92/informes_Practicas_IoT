@@ -53,11 +53,15 @@ export class AppController {
   @Delete(":id")
   eliminar(@Param('id') id: number){
     try{
-      this.animales = this.animales.filter((val, index) => index != id);
-      return true;
+      if(this.animales.length > id){
+        this.animales.splice(id,1);
+      return "animal borrado satisfactoriamente";  
+      }else{
+        return "no existe ningun animal con ese identificador"
+      }
     }
     catch{
-      return false;
+      return "se presento un problema, validar nuevamente";
     }
   }
 
