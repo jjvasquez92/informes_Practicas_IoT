@@ -1,20 +1,20 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { personajeServiceImpl } from '../../domain/services/personajeImpl.service';
-import { PersonajeController } from '../controllers/personaje.controller';
-import { PersonajeControllerImpl } from '../controllers/personajeImpl.controller';
+import { animalServiceImpl } from '../../domain/services/animalImpl.service';
+import { AnimalController } from '../controllers/animal.controller';
+import { AnimalControllerImpl } from '../controllers/animalImpl.controller';
 
 describe('AppController', () => {
-  let appController: PersonajeController;
+  let appController: AnimalController;
   beforeEach(async () => {
     const app: TestingModule = await Test.createTestingModule({
-      controllers: [PersonajeControllerImpl],
-      providers: [personajeServiceImpl],
+      controllers: [AnimalControllerImpl],
+      providers: [animalServiceImpl],
     }).compile();
-    appController = app.get<PersonajeController>(PersonajeControllerImpl);
+    appController = app.get<AnimalController>(AnimalControllerImpl);
   });
   describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.listPersonajes()).toBe('Hello World!');
+    it('should return "Hola mundo"', () => {
+      expect(appController.listAnimales()).toBe('Hello World!');
     });
   });
 });
