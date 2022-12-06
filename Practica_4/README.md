@@ -15,3 +15,16 @@ Desde deta
 
 ![node](imagenes/captura.png)
 
+Al realizar el despliegue se generan errores en la instalación del express, por lo cual se procede a instalarlo con los siguientes comandos. 
+
+npm install express
+
+npm install @types/express --save-dev
+
+Sin embargo, sigue generando el mismo error 
+
+![node](imagenes/error1.png)
+
+![node](imagenes/error2.png)
+
+Se crean varios proyectos de prueba pero no es posible solucionar el error.
