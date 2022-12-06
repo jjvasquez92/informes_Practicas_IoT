@@ -28,3 +28,6 @@ Sin embargo, sigue generando el mismo error
 ![node](imagenes/error2.png)
 
 Se crean varios proyectos de prueba pero no es posible solucionar el error.
+
+el link de la practica 4 es: https://ceeckb.deta.dev/
+
