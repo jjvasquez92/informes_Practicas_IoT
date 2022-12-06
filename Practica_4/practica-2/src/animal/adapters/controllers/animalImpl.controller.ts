@@ -1,7 +1,8 @@
-import { Controller, Delete, Get, Inject, Patch, Post, Put } from "@nestjs/common";
+import { Controller, Delete, Get, Inject, Patch, Post, Put, UseGuards } from "@nestjs/common";
 import { Animal } from "src/animal/domain/models/animal.model";
 import { AnimalService } from "src/animal/domain/services/animal.service";
 import { AnimalController } from "./animal.controller";
+import { AuthGuard } from '@nestjs/passport';
 
 const errReturn = (e: Error, message: string) => {
     return {
@@ -14,7 +15,7 @@ const errReturn = (e: Error, message: string) => {
 export class AnimalControllerImpl implements AnimalController{
     constructor(@Inject('AnimalService')private readonly animalService: AnimalService){}
 
-
+    @UseGuards(AuthGuard('local'))
     @Get()
     listAnimales() {
         try{
@@ -24,6 +25,7 @@ export class AnimalControllerImpl implements AnimalController{
         }
     }
 
+    @UseGuards(AuthGuard('local'))
     @Post()
     create(datos: Animal) {
         try{
@@ -32,7 +34,7 @@ export class AnimalControllerImpl implements AnimalController{
             return errReturn(e,"Error al crear al animal");
         }
     }
-
+    @UseGuards(AuthGuard('local'))
     @Put(":id")
     update(datos: Animal, id: number) {
         try{
@@ -41,7 +43,7 @@ export class AnimalControllerImpl implements AnimalController{
             return errReturn(e,"Error al modificar al animal");
         }
     }
-    
+    @UseGuards(AuthGuard('local'))
     @Delete(":id")
     delete(id: number) {
         try{
@@ -50,7 +52,7 @@ export class AnimalControllerImpl implements AnimalController{
             return errReturn(e,"Error al eliminar al animal");
           }
     }
-    
+    @UseGuards(AuthGuard('local'))
     @Patch(":id/edad/:edad")
     updateAge(id: number, edad: number) {
         try{

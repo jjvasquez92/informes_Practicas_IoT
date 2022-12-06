@@ -9,4 +9,18 @@ En esta práctica vamos a ver cómo podemos asegurar la calidad de nuestro softw
 2. Implementar protección simple de endpoints.
 3. Implementar autenticación JWT.
 
+Al momento de correr el servidor la autenticación me arroja los siguientes errores 
+
+![node](imagenes/error.png)
+
+Al verificar falta unas dependencias y queda ok 
+
+![node](imagenes/ok.png)
+
+finalmente se hace el POST y genera el token 
+
+![node](imagenes/token.png)
+
+
+
 
