@@ -1,14 +1,14 @@
 import { Module } from '@nestjs/common';
-import { PersonajeControllerImpl } from './personaje/adapters/controllers/personajeImpl.controller';
-import { personajeServiceImpl } from './personaje/domain/services/personajeImpl.service';
+import { AnimalControllerImpl } from './animal/adapters/controllers/animalImpl.controller';
+import { animalServiceImpl } from './animal/domain/services/animalImpl.service';
 
 
 @Module({
   imports: [],
-  controllers: [PersonajeControllerImpl],
+  controllers: [AnimalControllerImpl],
   providers: [{
-    provide: 'PersonajeService',
-    useClass: personajeServiceImpl
+    provide: 'animalService',
+    useClass: animalServiceImpl
   }],
 })
 export class AppModule {}
