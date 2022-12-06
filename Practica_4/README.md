@@ -6,3 +6,12 @@ Desarrollar un servidor web en la nube es una tarea relativamente sencilla. En e
 
 1. Desplegar una aplicación en la nube.
 2. Agregar una base de datos a la aplicación.
+
+# Despliegue # 
+
+![node](imagenes/prueba.png)
+
+Desde deta
+
+![node](imagenes/captura.png)
+
