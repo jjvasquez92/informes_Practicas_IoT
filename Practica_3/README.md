@@ -17,9 +17,11 @@ Al verificar falta unas dependencias y queda ok
 
 ![node](imagenes/ok.png)
 
-finalmente se hace el POST y genera el token 
+finalmente se hace el POST y genera el token, como se muestra a continuación
 
 ![node](imagenes/token.png)
+
+
 
 
 
