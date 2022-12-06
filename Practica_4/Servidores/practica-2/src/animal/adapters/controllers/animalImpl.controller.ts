@@ -1,7 +1,7 @@
 import { Controller, Delete, Get, Inject, Patch, Post, Put } from "@nestjs/common";
-import { Personaje } from "src/personaje/domain/models/personaje.model";
-import { PersonajeService } from "src/personaje/domain/services/personaje.service";
-import { PersonajeController } from "./personaje.controller";
+import { Animal } from "src/animal/domain/models/animal.model";
+import { AnimalService } from "src/animal/domain/services/animal.service";
+import { AnimalController } from "./animal.controller";
 
 const errReturn = (e: Error, message: string) => {
     return {
@@ -11,52 +11,52 @@ const errReturn = (e: Error, message: string) => {
   }
 
 @Controller()
-export class PersonajeControllerImpl implements PersonajeController{
-    constructor(@Inject('PersonajeService')private readonly personajeService: PersonajeService){}
+export class AnimalControllerImpl implements AnimalController{
+    constructor(@Inject('AnimalService')private readonly animalService: AnimalService){}
 
 
     @Get()
-    listPersonajes() {
+    listAnimales() {
         try{
-            return this.personajeService.list();
+            return this.animalService.list();
         }catch(e){
-            return errReturn(e,"Error al mostrar los personajes");
+            return errReturn(e,"Error al mostrar los animales");
         }
     }
 
     @Post()
-    create(datos: Personaje) {
+    create(datos: Animal) {
         try{
-            return this.personajeService.create(datos);
+            return this.animalService.create(datos);
         }catch(e){
-            return errReturn(e,"Error al crear al personaje");
+            return errReturn(e,"Error al crear al animal");
         }
     }
 
     @Put(":id")
-    update(datos: Personaje, id: number) {
+    update(datos: Animal, id: number) {
         try{
-            return this.personajeService.update(id,datos);
+            return this.animalService.update(id,datos);
         }catch(e){
-            return errReturn(e,"Error al modificar al personaje");
+            return errReturn(e,"Error al modificar al animal");
         }
     }
     
     @Delete(":id")
     delete(id: number) {
         try{
-            return this.personajeService.delete(id);
+            return this.animalService.delete(id);
           }catch(e){
-            return errReturn(e,"Error al eliminar al personaje");
+            return errReturn(e,"Error al eliminar al animal");
           }
     }
     
     @Patch(":id/edad/:edad")
     updateAge(id: number, edad: number) {
         try{
-            return this.personajeService.updateAge(id,edad);
+            return this.animalService.updateAge(id,edad);
           }catch(e){
-            return errReturn(e,"Error al modificar la edad del personaje");
+            return errReturn(e,"Error al modificar la edad del animal");
           }
     }
     
