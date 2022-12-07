@@ -51,3 +51,4 @@ Se realizan diferentes proyectos para verficicar que no haya error alguno en cua
 
 Se realiza toda la guia y se anexa todos los documentos.
 
+link proporcionado por DELTA: https://c14oe5.deta.dev/
