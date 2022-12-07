@@ -31,3 +31,23 @@ Se crean varios proyectos de prueba pero no es posible solucionar el error.
 
 el link de la practica 4 es: https://ceeckb.deta.dev/
 
+Se verifica que el servidor este corriendo perfectamente como se muestra en la siguiente imagen 
+
+![node](imagenes/servidor.png)
+
+Una vez el servidor se encuentra en perfecto funcionamiento se procede a realizar los siguientes comandos 
+
+![node](imagenes/corriendodeta.png)
+
+A continuación, abrimos delta y genera el siguiente error 
+
+![node](imagenes/errorPractica.png)
+
+Al verificar con el link vemos que tampoco trae los resultados esperados
+
+![node](imagenes/error404link.png)
+
+Se realizan diferentes proyectos para verficicar que no haya error alguno en cualquier configuracion pero el problema persiste. Por ello no es posible verificar cada uno de los metodos que se hacen con la base de datos.
+
+Se realiza toda la guia y se anexa todos los documentos.
+
